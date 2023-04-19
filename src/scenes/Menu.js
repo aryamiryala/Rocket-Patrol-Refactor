@@ -50,6 +50,7 @@ class Menu extends Phaser.Scene {
             this.sound.play('sfx_select');
             this.scene.start("playScene");    
           }
+          
           if (Phaser.Input.Keyboard.JustDown(keyRIGHT)) {
             // Expert mode
             game.settings = {
@@ -59,6 +60,8 @@ class Menu extends Phaser.Scene {
             this.sound.play('sfx_select');
             this.scene.start("playScene");    
           }
-        }
-        
     }
+}
+        
+
+
