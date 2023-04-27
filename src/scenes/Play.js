@@ -10,6 +10,7 @@ class Play extends Phaser.Scene {
         this.load.image('starfield', './assets/starfield.png');
         //load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
+        this.load.audio('sfx_runamok', './assets/Run-Amok.wav');
     }
 
     create(){
@@ -58,7 +59,7 @@ class Play extends Phaser.Scene {
              fontSize: '28px', 
              backgroundColor: '#F3B141',
              color: '#843605',
-             align: 'right',
+             align: 'left',
              padding: {
                  top: 5, 
                  bottom: 5,
@@ -66,6 +67,8 @@ class Play extends Phaser.Scene {
              fixedWidth: 100
          };
          this.scoreLeft = this.add.text(borderUISize + borderPadding, borderUISize + borderPadding*2, this.p1Score, scoreConfig);
+
+        
         
         //Game Over flag
         this.gameOver = false; 
@@ -78,11 +81,27 @@ class Play extends Phaser.Scene {
             this.gameOver = true;
         }, null, this);
 
+        
+        let timeConfig = {
+            fontFamily: 'Courier', 
+            fontSize: '28px', 
+            backgroundColor: '#F3B141',
+            color: '#843605',
+            align: 'left',
+            padding: {
+                top: 5, 
+                bottom: 5,
+            },
+            fixedWidth: 100
+        };
+        this.timeLeft = this.add.text(borderUISize + borderPadding*43, borderUISize + borderPadding*2, game.settings.gameTimer/1000, timeConfig);
 
+        
 
 
     }
     update(){
+        this.sound.play('sfx_runamok');
         //check key input for restart button 
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)){
             this.scene.restart(); 
@@ -92,11 +111,16 @@ class Play extends Phaser.Scene {
         }
         this.starfield.tilePositionX -= 4; 
 
+        let time = game.settings.gameTimer/1000;
         if(!this.gameOver) {
             this.p1Rocket.update(); 
             this.ship01.update(); 
             this.ship02.update(); 
             this.ship03.update(); 
+            
+            console.log(time);
+            time = time - 1; 
+            console.log(time);
 
         }
         //check collisions
