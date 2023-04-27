@@ -10,10 +10,20 @@ class Play extends Phaser.Scene {
         this.load.image('starfield', './assets/starfield.png');
         //load spritesheet
         this.load.spritesheet('explosion', './assets/explosion.png', {frameWidth: 64, frameHeight: 32, startFrame: 0, endFrame: 9});
-        this.load.audio('sfx_runamok', './assets/Run-Amok.wav');
+        
+        //load background music
+        this.load.audio('sfx_background', './assets/background.wav');
     }
 
     create(){
+        //Game Over flag
+        this.gameOver = false; 
+
+        //add music, set volume, play it
+        this.backgroundSong = this.sound.add('sfx_background', {volume: 0.5});   
+        this.backgroundSong.play();
+
+        
 
         //place tile sprite 
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0,0);
@@ -70,8 +80,6 @@ class Play extends Phaser.Scene {
 
         
         
-        //Game Over flag
-        this.gameOver = false; 
 
         //60 second play clock
         scoreConfig.fixedWidth = 0;
@@ -101,7 +109,7 @@ class Play extends Phaser.Scene {
 
     }
     update(){
-        this.sound.play('sfx_runamok');
+        //this.sound.play('sfx_background');
         //check key input for restart button 
         if(this.gameOver && Phaser.Input.Keyboard.JustDown(keyR)){
             this.scene.restart(); 

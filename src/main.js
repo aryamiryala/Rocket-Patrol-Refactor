@@ -6,6 +6,8 @@ Mods I choose:
 - Create a new title screen (e.g., new artwork, typography, layout) (10)
 - Implement parallax scrolling for the background (10) 
    - used https://www.youtube.com/watch?v=GwGzFczdpkg&t=1388s as reference
+- Add your own (copyright-free) background music to the Play scene (please be mindful of the volume) (5)
+   - got music from: https://www.chosic.com/free-music/energetic/
 
 */
 let config = {

@@ -11,6 +11,7 @@ class Menu extends Phaser.Scene {
     //load background image for menu
     this.load.image('starrysky', './assets/starrysky.png');
 
+
     }
 
     create(){
