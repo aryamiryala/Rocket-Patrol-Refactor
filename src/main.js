@@ -10,6 +10,8 @@ Mods I choose:
    - got music from: https://www.chosic.com/free-music/energetic/
 - Allow the player to control the Rocket after it's fired (5)
 - Implement mouse control for player movement and mouse click to fire (15)
+- Implement the 'FIRE' UI text from the original game (5)
+50 points
 
 */
 let config = {

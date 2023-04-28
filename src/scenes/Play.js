@@ -99,8 +99,22 @@ class Play extends Phaser.Scene {
         }, null, this);
 
        // this.highScoreDisplay = this.add.text(borderUISize + borderPadding*43, borderUISize + borderPadding*2, this.highScore, scoreConfig);
+
+       let fireConfig = {
+        fontFamily: 'Courier', 
+        fontSize: '28px', 
+        backgroundColor: '#F3B141',
+        color: '#843605',
+        align: 'left',
+        padding: {
+            top: 5, 
+            bottom: 5,
+        },
+        fixedWidth: 0
+       };
+        this.fireText = this.add.text(game.config.width/2, game.config.height/5 - borderUISize - borderPadding, 'FIRE', fireConfig).setVisible(false);
       
-        
+      
 
         
 
@@ -116,6 +130,8 @@ class Play extends Phaser.Scene {
             this.scene.start("menuScene");
         }
         this.starfield.tilePositionX -= 4; 
+
+        
        
         //let time = game.settings.gameTimer/1000;
         if(!this.gameOver) {
@@ -126,11 +142,15 @@ class Play extends Phaser.Scene {
             this.ship01.update(); 
             this.ship02.update(); 
             this.ship03.update(); 
+          
             
-            // console.log(time);
-            // time = time - 1; 
-            // console.log(time);
-
+            if(this.p1Rocket.isFiring == true){
+                this.fireText.setVisible(true);
+                
+            }
+            else{
+                this.fireText.setVisible(false);
+            }
         }
         //check collisions
         if(this.checkCollision(this.p1Rocket, this.ship03)){
