@@ -17,7 +17,6 @@ class Menu extends Phaser.Scene {
     create(){
       
       //add background image
-      //this.add.image(game.config.width/2, game.config.height/2, 'starrysky');
       this.starrysky= this.add.tileSprite(0, 0, 640, 480, 'starrysky').setOrigin(0,0);
 
 

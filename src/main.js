@@ -8,6 +8,8 @@ Mods I choose:
    - used https://www.youtube.com/watch?v=GwGzFczdpkg&t=1388s as reference
 - Add your own (copyright-free) background music to the Play scene (please be mindful of the volume) (5)
    - got music from: https://www.chosic.com/free-music/energetic/
+- Allow the player to control the Rocket after it's fired (5)
+- Implement mouse control for player movement and mouse click to fire (15)
 
 */
 let config = {
