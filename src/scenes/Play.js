@@ -25,8 +25,6 @@ class Play extends Phaser.Scene {
         this.backgroundSong = this.sound.add('sfx_background', {volume: 0.5});   
         this.backgroundSong.play();
 
-        
-
         //place tile sprite 
         this.starfield = this.add.tileSprite(0, 0, 640, 480, 'starfield').setOrigin(0,0);
         // green UI background
@@ -194,6 +192,12 @@ class Play extends Phaser.Scene {
         this.p1Score += ship.points; 
         this.scoreLeft.text = this.p1Score; 
 
-        this.sound.play('sfx_explosion');
+        //picking random sound for each explosion
+        const explosionSound = [this.sound.add('explosion1'), this.sound.add('explosion2'), this.sound.add('explosion3'), this.sound.add('explosion4')];
+
+       const random = explosionSound[Math.floor(Math.random()*explosionSound.length)];
+       random.play(); 
+
+        
     }
 }

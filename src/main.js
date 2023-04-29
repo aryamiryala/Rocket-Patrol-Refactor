@@ -11,7 +11,12 @@ Mods I choose:
 - Allow the player to control the Rocket after it's fired (5)
 - Implement mouse control for player movement and mouse click to fire (15)
 - Implement the 'FIRE' UI text from the original game (5)
-50 points
+   - used https://phaser.discourse.group/t/how-to-remove-text/742/2 as reference 
+- Create 4 new explosion sound effects and randomize which one plays on impact (10)
+   - used https://www.html5gamedevs.com/topic/41399-change-sound-on-click-dynamically/ as reference
+
+
+60 points
 
 */
 let config = {
