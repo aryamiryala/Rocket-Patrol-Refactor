@@ -14,9 +14,11 @@ Mods I choose:
    - used https://phaser.discourse.group/t/how-to-remove-text/742/2 as reference 
 - Create 4 new explosion sound effects and randomize which one plays on impact (10)
    - used https://www.html5gamedevs.com/topic/41399-change-sound-on-click-dynamically/ as reference
+- Randomize each spaceship's movement direction at the start of each play (5)
+- Create a new enemy Spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (15)
+   - used https://www.piskelapp.com/p/create/sprite to create new sprite. Also modyfied the Spaceship constructor
 
-
-60 points
+80 points
 
 */
 let config = {
