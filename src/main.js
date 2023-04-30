@@ -16,9 +16,12 @@ Mods I choose:
    - used https://www.html5gamedevs.com/topic/41399-change-sound-on-click-dynamically/ as reference
 - Randomize each spaceship's movement direction at the start of each play (5)
 - Create a new enemy Spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (15)
-   - used https://www.piskelapp.com/p/create/sprite to create new sprite. Also modyfied the Spaceship constructor
+   - used https://www.piskelapp.com/p/create/sprite to create new sprite. Also modyfied the Spaceship constructor to make ship faster
+- Use Phaser's particle emitter to create a particle explosion when the rocket hits the spaceship (15)
+   - used https://rexrainbow.github.io/phaser3-rex-notes/docs/site/particles/ and https://garystanton.co.uk/code/demos/particleExplosions/ as reference
 
-80 points
+
+95 points
 
 */
 let config = {
