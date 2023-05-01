@@ -1,7 +1,7 @@
 /*
 Arya Miryala
 Rocket Patrol II: Refactored
-Time it took complete:
+Time it took complete: worked on it over the week in small intervals, majority was worked on Saturday April 29; Apprx hours: 12-15 
 Mods I choose: 
 - Create a new title screen (e.g., new artwork, typography, layout) (10)
 - Implement parallax scrolling for the background (10) 
@@ -19,9 +19,10 @@ Mods I choose:
    - used https://www.piskelapp.com/p/create/sprite to create new sprite. Also modyfied the Spaceship constructor to make ship faster
 - Use Phaser's particle emitter to create a particle explosion when the rocket hits the spaceship (15)
    - used https://rexrainbow.github.io/phaser3-rex-notes/docs/site/particles/ and https://garystanton.co.uk/code/demos/particleExplosions/ as reference
+Display the time remaining (in seconds) on the screen (10)
+   - used https://rexrainbow.github.io/phaser3-rex-notes/docs/site/timer/ as reference
 
-
-95 points
+105 points
 
 */
 let config = {
